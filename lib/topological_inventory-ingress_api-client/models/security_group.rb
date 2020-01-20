@@ -22,7 +22,7 @@ module TopologicalInventoryIngressApiClient
 
     attr_accessor :name
 
-    attr_accessor :network_id
+    attr_accessor :network
 
     attr_accessor :orchestration_stack
 
@@ -45,7 +45,7 @@ module TopologicalInventoryIngressApiClient
         :'description' => :'description',
         :'extra' => :'extra',
         :'name' => :'name',
-        :'network_id' => :'network_id',
+        :'network' => :'network',
         :'orchestration_stack' => :'orchestration_stack',
         :'resource_timestamp' => :'resource_timestamp',
         :'source_created_at' => :'source_created_at',
@@ -63,7 +63,7 @@ module TopologicalInventoryIngressApiClient
         :'description' => :'String',
         :'extra' => :'Object',
         :'name' => :'String',
-        :'network_id' => :'Integer',
+        :'network' => :'NetworkReference',
         :'orchestration_stack' => :'OrchestrationStackReference',
         :'resource_timestamp' => :'DateTime',
         :'source_created_at' => :'DateTime',
@@ -81,7 +81,7 @@ module TopologicalInventoryIngressApiClient
         :'description',
         :'extra',
         :'name',
-        :'network_id',
+        :'network',
         :'orchestration_stack',
         :'resource_timestamp',
         :'source_created_at',
@@ -130,8 +130,8 @@ module TopologicalInventoryIngressApiClient
         self.name = attributes[:'name']
       end
 
-      if attributes.key?(:'network_id')
-        self.network_id = attributes[:'network_id']
+      if attributes.key?(:'network')
+        self.network = attributes[:'network']
       end
 
       if attributes.key?(:'orchestration_stack')
@@ -190,7 +190,7 @@ module TopologicalInventoryIngressApiClient
           description == o.description &&
           extra == o.extra &&
           name == o.name &&
-          network_id == o.network_id &&
+          network == o.network &&
           orchestration_stack == o.orchestration_stack &&
           resource_timestamp == o.resource_timestamp &&
           source_created_at == o.source_created_at &&
@@ -209,7 +209,7 @@ module TopologicalInventoryIngressApiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [archived_at, description, extra, name, network_id, orchestration_stack, resource_timestamp, source_created_at, source_deleted_at, source_ref, source_region, subscription].hash
+      [archived_at, description, extra, name, network, orchestration_stack, resource_timestamp, source_created_at, source_deleted_at, source_ref, source_region, subscription].hash
     end
 
     # Builds the object from hash

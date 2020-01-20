@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **extra** | [**Object**](.md) |  | [optional] 
 **name** | **String** |  | [optional] 
-**network_id** | **Integer** |  | [optional] 
+**network** | [**NetworkReference**](NetworkReference.md) |  | [optional] 
 **orchestration_stack** | [**OrchestrationStackReference**](OrchestrationStackReference.md) |  | [optional] 
 **resource_timestamp** | **DateTime** |  | [optional] 
 **source_created_at** | **DateTime** |  | [optional] 
@@ -26,7 +26,7 @@ instance = TopologicalInventoryIngressApiClient::SecurityGroup.new(archived_at: 
                                  description: null,
                                  extra: null,
                                  name: null,
-                                 network_id: null,
+                                 network: null,
                                  orchestration_stack: null,
                                  resource_timestamp: null,
                                  source_created_at: null,
