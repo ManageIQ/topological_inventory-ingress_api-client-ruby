@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **resource_timestamp** | **DateTime** |  | [optional] 
 **root_service_instance** | [**ServiceInstanceReference**](ServiceInstanceReference.md) |  | [optional] 
-**service_credential** | [**ServiceCredentialReference**](ServiceCredentialReference.md) |  | [optional] 
 **service_inventory** | [**ServiceInventoryReference**](ServiceInventoryReference.md) |  | [optional] 
 **service_offering** | [**ServiceOfferingReference**](ServiceOfferingReference.md) |  | [optional] 
 **service_plan** | [**ServicePlanReference**](ServicePlanReference.md) |  | [optional] 
@@ -31,7 +30,6 @@ instance = TopologicalInventoryIngressApiClient::ServiceInstance.new(archived_at
                                  name: null,
                                  resource_timestamp: null,
                                  root_service_instance: null,
-                                 service_credential: null,
                                  service_inventory: null,
                                  service_offering: null,
                                  service_plan: null,

@@ -22,6 +22,8 @@ module TopologicalInventoryIngressApiClient
 
     attr_accessor :resource_timestamp
 
+    attr_accessor :service_credential_type
+
     attr_accessor :source_created_at
 
     attr_accessor :source_ref
@@ -37,6 +39,7 @@ module TopologicalInventoryIngressApiClient
         :'description' => :'description',
         :'name' => :'name',
         :'resource_timestamp' => :'resource_timestamp',
+        :'service_credential_type' => :'service_credential_type',
         :'source_created_at' => :'source_created_at',
         :'source_ref' => :'source_ref',
         :'source_updated_at' => :'source_updated_at',
@@ -51,6 +54,7 @@ module TopologicalInventoryIngressApiClient
         :'description' => :'String',
         :'name' => :'String',
         :'resource_timestamp' => :'DateTime',
+        :'service_credential_type' => :'ServiceCredentialTypeReference',
         :'source_created_at' => :'DateTime',
         :'source_ref' => :'String',
         :'source_updated_at' => :'DateTime',
@@ -65,6 +69,7 @@ module TopologicalInventoryIngressApiClient
         :'description',
         :'name',
         :'resource_timestamp',
+        :'service_credential_type',
         :'source_created_at',
         :'source_updated_at',
         :'type_name'
@@ -108,6 +113,10 @@ module TopologicalInventoryIngressApiClient
 
       if attributes.key?(:'resource_timestamp')
         self.resource_timestamp = attributes[:'resource_timestamp']
+      end
+
+      if attributes.key?(:'service_credential_type')
+        self.service_credential_type = attributes[:'service_credential_type']
       end
 
       if attributes.key?(:'source_created_at')
@@ -154,6 +163,7 @@ module TopologicalInventoryIngressApiClient
           description == o.description &&
           name == o.name &&
           resource_timestamp == o.resource_timestamp &&
+          service_credential_type == o.service_credential_type &&
           source_created_at == o.source_created_at &&
           source_ref == o.source_ref &&
           source_updated_at == o.source_updated_at &&
@@ -169,7 +179,7 @@ module TopologicalInventoryIngressApiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [archived_at, description, name, resource_timestamp, source_created_at, source_ref, source_updated_at, type_name].hash
+      [archived_at, description, name, resource_timestamp, service_credential_type, source_created_at, source_ref, source_updated_at, type_name].hash
     end
 
     # Builds the object from hash
