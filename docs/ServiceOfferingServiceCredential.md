@@ -1,0 +1,19 @@
+# TopologicalInventoryIngressApiClient::ServiceOfferingServiceCredential
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**service_credential** | [**ServiceCredentialReference**](ServiceCredentialReference.md) |  | 
+**service_offering** | [**ServiceOfferingReference**](ServiceOfferingReference.md) |  | 
+
+## Code Sample
+
+```ruby
+require 'TopologicalInventoryIngressApiClient'
+
+instance = TopologicalInventoryIngressApiClient::ServiceOfferingServiceCredential.new(service_credential: null,
+                                 service_offering: null)
+```
+
+

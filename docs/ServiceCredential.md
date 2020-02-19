@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **resource_timestamp** | **DateTime** |  | [optional] 
+**service_credential_type** | [**ServiceCredentialTypeReference**](ServiceCredentialTypeReference.md) |  | [optional] 
 **source_created_at** | **DateTime** |  | [optional] 
 **source_ref** | **String** |  | 
 **source_updated_at** | **DateTime** |  | [optional] 
@@ -22,6 +23,7 @@ instance = TopologicalInventoryIngressApiClient::ServiceCredential.new(archived_
                                  description: null,
                                  name: null,
                                  resource_timestamp: null,
+                                 service_credential_type: null,
                                  source_created_at: null,
                                  source_ref: null,
                                  source_updated_at: null,

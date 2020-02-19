@@ -13,7 +13,6 @@ Name | Type | Description | Notes
 **long_description** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **resource_timestamp** | **DateTime** |  | [optional] 
-**service_credential** | [**ServiceCredentialReference**](ServiceCredentialReference.md) |  | [optional] 
 **service_inventory** | [**ServiceInventoryReference**](ServiceInventoryReference.md) |  | [optional] 
 **service_offering_icon** | [**ServiceOfferingIconReference**](ServiceOfferingIconReference.md) |  | [optional] 
 **source_created_at** | **DateTime** |  | [optional] 
@@ -37,7 +36,6 @@ instance = TopologicalInventoryIngressApiClient::ServiceOfferingAllOf.new(archiv
                                  long_description: null,
                                  name: null,
                                  resource_timestamp: null,
-                                 service_credential: null,
                                  service_inventory: null,
                                  service_offering_icon: null,
                                  source_created_at: null,
