@@ -22,7 +22,9 @@
 # Then explicitly reverse the ignore rule for a single file:
 #!docs/README.md
 
+.rubocop.yml
 .gitignore
+.travis.yml
 
 topological_inventory-ingress_api-client.gemspec
 
