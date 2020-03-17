@@ -32,33 +32,53 @@ module TopologicalInventoryIngressApiClient
 
     attr_accessor :collections
 
+    attr_accessor :refresh_state_part_collected_at
+
+    attr_accessor :refresh_state_part_sent_at
+
+    attr_accessor :refresh_state_started_at
+
+    attr_accessor :refresh_state_sent_at
+
+    attr_accessor :ingress_api_sent_at
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'name' => :'name',
-        :'schema' => :'schema',
-        :'source' => :'source',
-        :'source_type' => :'source_type',
-        :'refresh_state_uuid' => :'refresh_state_uuid',
-        :'refresh_state_part_uuid' => :'refresh_state_part_uuid',
-        :'total_parts' => :'total_parts',
-        :'sweep_scope' => :'sweep_scope',
-        :'collections' => :'collections'
+        :'name'                            => :'name',
+        :'schema'                          => :'schema',
+        :'source'                          => :'source',
+        :'source_type'                     => :'source_type',
+        :'refresh_state_uuid'              => :'refresh_state_uuid',
+        :'refresh_state_part_uuid'         => :'refresh_state_part_uuid',
+        :'total_parts'                     => :'total_parts',
+        :'sweep_scope'                     => :'sweep_scope',
+        :'collections'                     => :'collections',
+        :'refresh_state_part_collected_at' => :'refresh_state_part_collected_at',
+        :'refresh_state_part_sent_at'      => :'refresh_state_part_sent_at',
+        :'refresh_state_started_at'        => 'refresh_state_started_at',
+        :'refresh_state_sent_at'           => 'refresh_state_sent_at',
+        :'ingress_api_sent_at'             => :'ingress_api_sent_at'
       }
     end
 
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'name' => :'String',
-        :'schema' => :'Schema',
-        :'source' => :'String',
-        :'source_type' => :'String',
-        :'refresh_state_uuid' => :'String',
-        :'refresh_state_part_uuid' => :'String',
-        :'total_parts' => :'Integer',
-        :'sweep_scope' => :'Array<String>',
-        :'collections' => :'Array<InventoryCollection>'
+        :'name'                            => :'String',
+        :'schema'                          => :'Schema',
+        :'source'                          => :'String',
+        :'source_type'                     => :'String',
+        :'refresh_state_uuid'              => :'String',
+        :'refresh_state_part_uuid'         => :'String',
+        :'total_parts'                     => :'Integer',
+        :'sweep_scope'                     => :'Array<String>',
+        :'collections'                     => :'Array<InventoryCollection>',
+        :'refresh_state_part_collected_at' => :'DateTime',
+        :'refresh_state_part_sent_at'      => :'DateTime',
+        :'refresh_state_started_at'        => :'DateTime',
+        :'refresh_state_sent_at'           => :'DateTime',
+        :'ingress_api_sent_at'             => :'DateTime'
       }
     end
 
@@ -114,6 +134,26 @@ module TopologicalInventoryIngressApiClient
           self.collections = value
         end
       end
+
+      if attributes.key?(:'refresh_state_part_collected_at')
+        self.refresh_state_part_collected_at = attributes[:'refresh_state_part_collected_at']
+      end
+
+      if attributes.key?(:'refresh_state_part_sent_at')
+        self.refresh_state_part_sent_at = attributes[:'refresh_state_part_sent_at']
+      end
+
+      if attributes.key?(:'refresh_state_started_at')
+        self.refresh_state_started_at = attributes[:'refresh_state_started_at']
+      end
+
+      if attributes.key?(:'refresh_state_sent_at')
+        self.refresh_state_sent_at = attributes[:'refresh_state_sent_at']
+      end
+
+      if attributes.key?(:'ingress_api_sent_at')
+        self.ingress_api_sent_at = attributes[:'ingress_api_sent_at']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -152,7 +192,12 @@ module TopologicalInventoryIngressApiClient
           refresh_state_part_uuid == o.refresh_state_part_uuid &&
           total_parts == o.total_parts &&
           sweep_scope == o.sweep_scope &&
-          collections == o.collections
+          collections == o.collections &&
+          refresh_state_part_collected_at == o.refresh_state_part_collected_at &&
+          refresh_state_part_sent_at == o.refresh_state_part_sent_at &&
+          refresh_state_started_at == o.refresh_state_started_at &&
+          refresh_state_sent_at == o.refresh_state_sent_at &&
+          ingress_api_sent_at == o.ingress_api_sent_at
     end
 
     # @see the `==` method
@@ -164,7 +209,8 @@ module TopologicalInventoryIngressApiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [name, schema, source, source_type, refresh_state_uuid, refresh_state_part_uuid, total_parts, sweep_scope, collections].hash
+      [name, schema, source, source_type, refresh_state_uuid, refresh_state_part_uuid, total_parts, sweep_scope, collections,
+       refresh_state_part_collected_at, refresh_state_part_sent_at, refresh_state_started_at, refresh_state_sent_at, ingress_api_sent_at].hash
     end
 
     # Builds the object from hash
