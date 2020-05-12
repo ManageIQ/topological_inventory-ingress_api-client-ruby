@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **source_deleted_at** | **DateTime** |  | [optional] 
 **source_ref** | **String** |  | 
 **source_region** | [**SourceRegionReference**](SourceRegionReference.md) |  | [optional] 
+**source_updated_at** | **DateTime** |  | [optional] 
 **state** | **String** |  | [optional] 
 **subscription** | [**SubscriptionReference**](SubscriptionReference.md) |  | [optional] 
 **volume_type** | [**VolumeTypeReference**](VolumeTypeReference.md) |  | [optional] 
@@ -33,6 +34,7 @@ instance = TopologicalInventoryIngressApiClient::VolumeAllOf.new(archived_at: nu
                                  source_deleted_at: null,
                                  source_ref: null,
                                  source_region: null,
+                                 source_updated_at: null,
                                  state: null,
                                  subscription: null,
                                  volume_type: null)
