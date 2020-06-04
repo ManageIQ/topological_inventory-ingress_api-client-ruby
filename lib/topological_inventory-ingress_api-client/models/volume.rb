@@ -34,6 +34,8 @@ module TopologicalInventoryIngressApiClient
 
     attr_accessor :source_region
 
+    attr_accessor :source_updated_at
+
     attr_accessor :state
 
     attr_accessor :subscription
@@ -53,6 +55,7 @@ module TopologicalInventoryIngressApiClient
         :'source_deleted_at' => :'source_deleted_at',
         :'source_ref' => :'source_ref',
         :'source_region' => :'source_region',
+        :'source_updated_at' => :'source_updated_at',
         :'state' => :'state',
         :'subscription' => :'subscription',
         :'volume_type' => :'volume_type'
@@ -72,6 +75,7 @@ module TopologicalInventoryIngressApiClient
         :'source_deleted_at' => :'DateTime',
         :'source_ref' => :'String',
         :'source_region' => :'SourceRegionReference',
+        :'source_updated_at' => :'DateTime',
         :'state' => :'String',
         :'subscription' => :'SubscriptionReference',
         :'volume_type' => :'VolumeTypeReference'
@@ -90,6 +94,7 @@ module TopologicalInventoryIngressApiClient
         :'source_created_at',
         :'source_deleted_at',
         :'source_region',
+        :'source_updated_at',
         :'state',
         :'subscription',
         :'volume_type'
@@ -159,6 +164,10 @@ module TopologicalInventoryIngressApiClient
         self.source_region = attributes[:'source_region']
       end
 
+      if attributes.key?(:'source_updated_at')
+        self.source_updated_at = attributes[:'source_updated_at']
+      end
+
       if attributes.key?(:'state')
         self.state = attributes[:'state']
       end
@@ -205,6 +214,7 @@ module TopologicalInventoryIngressApiClient
           source_deleted_at == o.source_deleted_at &&
           source_ref == o.source_ref &&
           source_region == o.source_region &&
+          source_updated_at == o.source_updated_at &&
           state == o.state &&
           subscription == o.subscription &&
           volume_type == o.volume_type
@@ -219,7 +229,7 @@ module TopologicalInventoryIngressApiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [archived_at, extra, name, orchestration_stack, resource_timestamp, size, source_created_at, source_deleted_at, source_ref, source_region, state, subscription, volume_type].hash
+      [archived_at, extra, name, orchestration_stack, resource_timestamp, size, source_created_at, source_deleted_at, source_ref, source_region, source_updated_at, state, subscription, volume_type].hash
     end
 
     # Builds the object from hash
