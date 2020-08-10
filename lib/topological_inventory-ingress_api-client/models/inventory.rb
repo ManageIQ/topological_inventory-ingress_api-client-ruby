@@ -42,6 +42,8 @@ module TopologicalInventoryIngressApiClient
 
     attr_accessor :ingress_api_sent_at
 
+    attr_accessor :refresh_type
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -58,7 +60,8 @@ module TopologicalInventoryIngressApiClient
         :'refresh_state_part_sent_at'      => :'refresh_state_part_sent_at',
         :'refresh_state_started_at'        => 'refresh_state_started_at',
         :'refresh_state_sent_at'           => 'refresh_state_sent_at',
-        :'ingress_api_sent_at'             => :'ingress_api_sent_at'
+        :'ingress_api_sent_at'             => :'ingress_api_sent_at',
+        :'refresh_type'                    => :'refresh_type'
       }
     end
 
@@ -78,7 +81,8 @@ module TopologicalInventoryIngressApiClient
         :'refresh_state_part_sent_at'      => :'DateTime',
         :'refresh_state_started_at'        => :'DateTime',
         :'refresh_state_sent_at'           => :'DateTime',
-        :'ingress_api_sent_at'             => :'DateTime'
+        :'ingress_api_sent_at'             => :'DateTime',
+        :'refresh_type'                    => :'String'
       }
     end
 
@@ -154,6 +158,10 @@ module TopologicalInventoryIngressApiClient
       if attributes.key?(:'ingress_api_sent_at')
         self.ingress_api_sent_at = attributes[:'ingress_api_sent_at']
       end
+
+      if attributes.key?(:'refresh_type')
+        self.refresh_type = attributes[:'refresh_type']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -197,7 +205,8 @@ module TopologicalInventoryIngressApiClient
           refresh_state_part_sent_at == o.refresh_state_part_sent_at &&
           refresh_state_started_at == o.refresh_state_started_at &&
           refresh_state_sent_at == o.refresh_state_sent_at &&
-          ingress_api_sent_at == o.ingress_api_sent_at
+          ingress_api_sent_at == o.ingress_api_sent_at &&
+          refresh_type == o.refresh_type
     end
 
     # @see the `==` method
@@ -210,7 +219,8 @@ module TopologicalInventoryIngressApiClient
     # @return [Integer] Hash code
     def hash
       [name, schema, source, source_type, refresh_state_uuid, refresh_state_part_uuid, total_parts, sweep_scope, collections,
-       refresh_state_part_collected_at, refresh_state_part_sent_at, refresh_state_started_at, refresh_state_sent_at, ingress_api_sent_at].hash
+       refresh_state_part_collected_at, refresh_state_part_sent_at, refresh_state_started_at, refresh_state_sent_at, ingress_api_sent_at,
+       refresh_type].hash
     end
 
     # Builds the object from hash
