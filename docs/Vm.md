@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **extra** | [**Object**](.md) |  | [optional] 
 **flavor** | [**FlavorReference**](FlavorReference.md) |  | [optional] 
+**guest_info** | **String** |  | [optional] 
 **host** | [**HostReference**](HostReference.md) |  | [optional] 
 **host_inventory_uuid** | **String** | UUID of the host in host inventory | [optional] 
 **hostname** | **String** |  | [optional] 
@@ -35,6 +36,7 @@ instance = TopologicalInventoryIngressApiClient::Vm.new(archived_at: null,
                                  description: null,
                                  extra: null,
                                  flavor: null,
+                                 guest_info: null,
                                  host: null,
                                  host_inventory_uuid: 82729f49-ed4e-4fc6-9ca1-b0ffee063874,
                                  hostname: null,
